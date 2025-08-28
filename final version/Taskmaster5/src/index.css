@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --card: #ffffff;
+}
+.dark :root {
+  --card: #0f172a;
+}
+
+/* small helpers */
+.modal-backdrop { @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50; }
+.modal { @apply bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-2xl p-6; }
+.card { @apply bg-white dark:bg-gray-800 rounded-lg p-4 shadow border border-gray-100 dark:border-gray-700; }
+
+/* react-calendar tweaks */
+.react-calendar { background: transparent; border: none; }
+.react-calendar__tile--now { background: rgba(99,102,241,0.12); border-radius: 0.5rem; }
+.react-calendar__tile--active { background: rgba(99,102,241,0.2); border-radius: 0.5rem; }
